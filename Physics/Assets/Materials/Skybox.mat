@@ -93,7 +93,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Star_Density: 7.2
-    - _Sun_Mask_Size: 0.5
+    - _Sun_Mask_Size: 0.48
     - _Sun_Size: 0.5
     - _UVSec: 0
     - _Wind_Speed: 0.7
@@ -104,7 +104,7 @@ Material:
     - _HorizonColour: {r: 0.509434, g: 0, b: 0.491342, a: 0}
     - _SkyColour: {r: 0, g: 0.7661369, b: 0.972549, a: 0}
     - _Skybox_UV: {r: 0, g: 0, b: 0, a: 0}
-    - _Sun_Mask_Displacement: {r: 0.1, g: -0.1, b: 0.03, a: 0}
+    - _Sun_Mask_Displacement: {r: 0.15, g: 0.08, b: 0.03, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7537343648738563255
 MonoBehaviour:
