@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Tooth : MonoBehaviour
 {
-    public Transform toothTip;
+    public Transform toothTip, toothTop;
     public LayerMask biteable;
-    Vector3 initialPoint;
+    Transform initialPoint;
+    public float toothLength, maxDistanceBetweenInitialPoints;
     [SerializeField]
     float distanceFromInitial, highestDistance;
     bool bite = false;
@@ -15,6 +16,7 @@ public class Tooth : MonoBehaviour
     void Start()
     {
         highestDistance = 0;
+        toothLength = (toothTip.position - toothTop.position).magnitude;
     }
 
     // Update is called once per frame
@@ -22,9 +24,13 @@ public class Tooth : MonoBehaviour
     {
         if (bite)
         {
-            distanceFromInitial = (toothTip.position - initialPoint).magnitude;
-            //Change this so it only works in the direction parallel to the tooth
-            if (distanceFromInitial > highestDistance) highestDistance = distanceFromInitial;
+            distanceFromInitial = Mathf.Clamp((Vector3.Dot(toothTip.position - initialPoint.position, -transform.up)), 0, toothLength);
+            if (distanceFromInitial > highestDistance)
+            {
+                highestDistance = distanceFromInitial;
+                float lerpValue = distanceFromInitial / toothLength;
+                GetComponent<Renderer>().material.SetVector("_Offset", new Vector2(0, lerpValue));
+            }
         }
     }
 
@@ -33,10 +39,31 @@ public class Tooth : MonoBehaviour
         Debug.Log("touchy");
         if (other.GetComponent<Biteable>())
         {
-            Debug.Log("good touchy");
-            bite = true;
-            initialPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
-            //Change this in such a way that biting near an old initial point will just make that the new initial point
+            if (initialPoint != null)
+            {
+                float distanceBetweenInitials = (other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position) - initialPoint.position).magnitude;
+
+                if (distanceBetweenInitials <= maxDistanceBetweenInitialPoints) //Something to check if it's close to old one
+                {
+                    bite = true;
+                }
+                else
+                {
+                    bite = true;
+                    string gameObjectName = new string("Initial " + other.gameObject);
+                    initialPoint = new GameObject(gameObjectName).transform;
+                    initialPoint.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                    initialPoint.parent = other.transform;
+                }
+            }
+            else
+            {
+                bite = true;
+                string gameObjectName = new string("Initial " + other.gameObject);
+                initialPoint = new GameObject(gameObjectName).transform;
+                initialPoint.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                initialPoint.parent = other.transform;
+            }
         }
     }
 
