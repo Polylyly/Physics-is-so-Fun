@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Biteable : MonoBehaviour
 {
+    public Color bloodColour;
+
     // Start is called before the first frame update
     void Start()
     {

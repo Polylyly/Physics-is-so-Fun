@@ -7,10 +7,13 @@ public class Tooth : MonoBehaviour
     public Transform toothTip, toothTop;
     public LayerMask biteable;
     Transform initialPoint;
-    public float toothLength, maxDistanceBetweenInitialPoints;
+    public float toothLength, maxDistanceBetweenInitialPoints, offset;
+    public Color toothColour;
+    public GameObject holeDecal, bloodDecal;
     [SerializeField]
     float distanceFromInitial, highestDistance;
     bool bite = false;
+    Color bloodColour;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class Tooth : MonoBehaviour
             {
                 highestDistance = distanceFromInitial;
                 float lerpValue = distanceFromInitial / toothLength;
-                GetComponent<Renderer>().material.SetVector("_Offset", new Vector2(0, lerpValue));
+                GetComponent<Renderer>().material.SetVector("_Offset", new Vector2(0, Mathf.Clamp01(lerpValue - offset)));
             }
         }
     }
@@ -54,6 +57,26 @@ public class Tooth : MonoBehaviour
                     initialPoint = new GameObject(gameObjectName).transform;
                     initialPoint.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
                     initialPoint.parent = other.transform;
+                    bloodColour = other.GetComponent<Biteable>().bloodColour;
+                    if (bloodColour != GetComponent<Renderer>().material.GetColor("_BloodColour"))
+                    {
+                        highestDistance = 0;
+                        float lerpValue = highestDistance / toothLength;
+                        GetComponent<Renderer>().material.SetVector("_Offset", new Vector2(0, Mathf.Clamp01(lerpValue - offset)));
+                    }
+                    GetComponent<Renderer>().material.SetColor("_BloodColour", bloodColour);
+                    GetComponent<Renderer>().material.SetColor("_ToothColour", toothColour);
+
+                    //Below is the creation of the decals
+                    //GameObject decalHole = Instantiate(holeDecal); //Might need to replace with decal projector
+                    //decalHole.transform.parent = other.transform;
+                    //decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                    //Sizing and stuff
+
+                    //GameObject decalBlood = Instantiate(bloodDecal); //Might need to replace with decal projector
+                    //decalBlood.transform.parent = other.transform;
+                    //decalBlood.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                    //Sizing and stuff
                 }
             }
             else
@@ -63,6 +86,20 @@ public class Tooth : MonoBehaviour
                 initialPoint = new GameObject(gameObjectName).transform;
                 initialPoint.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
                 initialPoint.parent = other.transform;
+                bloodColour = other.GetComponent<Biteable>().bloodColour;
+                GetComponent<Renderer>().material.SetColor("_BloodColour", bloodColour);
+                GetComponent<Renderer>().material.SetColor("_ToothColour", toothColour);
+
+                //Below is the creation of the decals
+                //GameObject decalHole = Instantiate(holeDecal);
+                //decalHole.transform.parent = other.transform;
+                //decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                //Sizing and stuff
+
+                //GameObject decalBlood = Instantiate(bloodDecal);
+                //decalBlood.transform.parent = other.transform;
+                //decalBlood.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                //Sizing and stuff
             }
         }
     }

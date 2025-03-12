@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -229,6 +229,10 @@ MonoBehaviour:
     m_Bits: 64
   toothLength: 0
   maxDistanceBetweenInitialPoints: 0.1
+  offset: 0.25
+  toothColour: {r: 1, g: 1, b: 1, a: 1}
+  holeDecal: {fileID: 0}
+  bloodDecal: {fileID: 0}
   distanceFromInitial: 0
   highestDistance: 0
 --- !u!54 &107825830
@@ -594,6 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2f18e7a713a4c64830abefb2b772dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodColour: {r: 0, g: 0.16342616, b: 1, a: 1}
 --- !u!54 &1296927503
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -792,6 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2f18e7a713a4c64830abefb2b772dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodColour: {r: 0.3340696, g: 1, b: 0, a: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
