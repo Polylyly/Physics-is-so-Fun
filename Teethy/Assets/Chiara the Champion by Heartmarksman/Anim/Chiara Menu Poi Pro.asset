@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Chiara Menu Poi Pro
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 77d38cfe5f060964c91d545e7d5e146e, type: 2}
+  controls:
+  - name: heartmarksman.gumroad.com
+    icon: {fileID: 2800000, guid: 92615665a71d52e46a33e333d4dd6ebc, type: 3}
+    type: 101
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Toggle
+    icon: {fileID: 2800000, guid: 32d3ac95f31119842a7b431ac607c91b, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f25ff6f4aa7cbdf4e93f55afb15ad3de, type: 2}
+    subParameters: []
+    labels: []
+  - name: Customization
+    icon: {fileID: 2800000, guid: cc3886b3170f79647a98b4b20ab3d933, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 4a1b34f4d00e42c45bfc57f306b4b70a, type: 2}
+    subParameters: []
+    labels: []
+  - name: Interactive Settings
+    icon: {fileID: 2800000, guid: 44b822c693fbd174d8f994ee312dd8e4, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 037fa31dec8bed8499ec46f8364edc63, type: 2}
+    subParameters: []
+    labels: []
+  - name: Marker
+    icon: {fileID: 2800000, guid: d7f5ccd8035dd4d4d9f80706d359fdfa, type: 3}
+    type: 103
+    parameter:
+      name: M_Menu
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 0434c98b5d6153344986228b23d92779, type: 2}
+    subParameters: []
+    labels: []
+  - name: Vampire
+    icon: {fileID: 2800000, guid: d7f5ccd8035dd4d4d9f80706d359fdfa, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 4e495e52717ae9043878e3d69303515b, type: 2}
+    subParameters: []
+    labels: []

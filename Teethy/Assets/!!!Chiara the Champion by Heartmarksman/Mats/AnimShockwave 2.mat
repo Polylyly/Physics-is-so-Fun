@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AnimShockwave 2
+  m_Shader: {fileID: 4800000, guid: 74e814afd5b766447b0de37c532cc8f9, type: 3}
+  m_ShaderKeywords: _ALPHABLEND_ON _FILTERING_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - ALWAYS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CutoutTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Distortion1:
+        m_Texture: {fileID: 2800000, guid: 5380cb98dadbe6e409671d07d1540bb4, type: 3}
+        m_Scale: {x: 8, y: 8}
+        m_Offset: {x: 0, y: 0}
+    - _Distortion2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Distortion3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: aeabc6670bbe81d4ab1c68c3ada6ba2a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskDistortion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 8, y: 8}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 89819f8cb0b9e5d418f6e90ca96ac9c3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: aeabc6670bbe81d4ab1c68c3ada6ba2a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - NeverChange: 950000
+    - _Additive: 10
+    - _AlphaBlend: 10
+    - _AutoShift: 0
+    - _AutoShiftSpeed: 0.25
+    - _BlendMode: 0
+    - _Brightness: 1
+    - _Contrast: 1
+    - _CullMode: 0
+    - _Culling: 0
+    - _Cutoff: 0
+    - _Cutout: 0.5
+    - _CutoutThreshold: 0.015
+    - _DistortMainTex: 0
+    - _Distortion: 0
+    - _Distortion1Strength: 0.001
+    - _Distortion1X: 1
+    - _Distortion1Y: 1
+    - _Distortion2Strength: 0
+    - _Distortion2X: 0
+    - _Distortion2Y: 0
+    - _Distortion3Strength: 0
+    - _Distortion3X: 0
+    - _Distortion3Y: 0
+    - _DistortionBlend: 0.5
+    - _DistortionStr: 0
+    - _DstBlend: 10
+    - _DstMode: 3
+    - _EmissionBloom: 5
+    - _Falloff: 0
+    - _FalloffMode: 0
+    - _Filtering: 1
+    - _FlipbookBlending: 0
+    - _FresnelFadeFactor: 3
+    - _FresnelPow: 5
+    - _FresnelR0: 0.04
+    - _Glow: 3
+    - _HDR: 1
+    - _Hue: 0
+    - _InvFade: 90
+    - _IsCutout: 0
+    - _Layering: 0
+    - _MaskDisortionX: 0
+    - _MaskDisortionY: 0
+    - _MaskDistortionStrength: 0
+    - _MaskRotation: 0
+    - _MaskX: 0
+    - _MaskY: 0
+    - _MaxRange: 15
+    - _MinRange: 8
+    - _NaNLmao: 0
+    - _NearMaxRange: 5
+    - _NearMinRange: 1
+    - _Opacity: 1
+    - _Pulse: 0
+    - _PulseSpeed: 1
+    - _PulseStr: 0.5
+    - _Saturation: 1
+    - _SoftInverted: 0
+    - _SoftenStr: 0
+    - _Softening: 0
+    - _SrcBlend: 5
+    - _SrcMode: 0
+    - _TexBlendMode: 0
+    - _Texture1Color: 1
+    - _Texture1Rotation: 0
+    - _Texture1Strength: 2
+    - _Texture1X: 0
+    - _Texture1Y: 0
+    - _Texture2Color: 1
+    - _Texture2Rotation: 0
+    - _Texture2Strength: 0
+    - _Texture2X: 0
+    - _Texture2Y: 0
+    - _Texture3Color: 1
+    - _Texture3Rotation: 0
+    - _Texture3Strength: 0
+    - _Texture3X: 0
+    - _Texture3Y: 0
+    - _UseCutout: 0
+    - _UseCutoutTex: 0
+    - _UseCutoutThreshold: 0
+    - _UseFrameBlending: 0
+    - _UseFresnel: 0
+    - _UseFresnelFading: 0
+    - _UseNoiseDistortion: 0
+    - _UseParticlesAlphaCutout: 0
+    - _UseSoft: 0
+    - _UseSoftCutout: 0
+    - _UseVertexStreamRandom: 0
+    - _Waveform: 0
+    - _ZTest: 4
+    - _ZTestMode: 4
+    - _ZWrite: 0
+    - _ZWriteMode: 0
+    - __dirty: 1
+    m_Colors:
+    - _Color: {r: 5.214259, g: 6.4116073, b: 7.3772106, a: 1}
+    - _CutoutColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DistortionSpeed: {r: 0, g: 0, b: 0, a: 0}
+    - _DistortionSpeedScale: {r: 1, g: -1, b: 0.15, a: 0.15}
+    - _FogColorMultiplier: {r: 1, g: 1, b: 1, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
+    - _NormalMapScale: {r: 1, g: 1, b: 0, a: 0}
+    - _SecondColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 0, g: 0, b: 0, a: 1}

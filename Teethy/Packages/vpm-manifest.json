@@ -1,0 +1,71 @@
+{
+  "dependencies": {
+    "tech.lastation.nsfw-locomotion": {
+      "version": "1.1.1"
+    },
+    "adjerry91.vrcft.templates": {
+      "version": "6.6.0"
+    },
+    "com.llealloo.audiolink": {
+      "version": "2.1.0"
+    },
+    "dev.vrlabs.av3manager": {
+      "version": "2.0.34"
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.3"
+    },
+    "lyuma.av3emulator": {
+      "version": "3.4.8"
+    }
+  },
+  "locked": {
+    "tech.lastation.nsfw-locomotion": {
+      "version": "1.1.1",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.5.0 < 3.8.X",
+        "com.vrcfury.vrcfury": ">=1.1000.0"
+      }
+    },
+    "com.vrchat.avatars": {
+      "version": "3.7.6",
+      "dependencies": {
+        "com.vrchat.base": "3.7.6"
+      }
+    },
+    "com.vrchat.base": {
+      "version": "3.7.6",
+      "dependencies": {}
+    },
+    "com.vrcfury.vrcfury": {
+      "version": "1.1204.0",
+      "dependencies": {}
+    },
+    "adjerry91.vrcft.templates": {
+      "version": "6.6.0",
+      "dependencies": {}
+    },
+    "com.llealloo.audiolink": {
+      "version": "2.1.0",
+      "dependencies": {}
+    },
+    "dev.vrlabs.av3manager": {
+      "version": "2.0.34",
+      "dependencies": {
+        "com.vrchat.avatars": "3.2 - 3.7"
+      }
+    },
+    "vrchat.blackstartx.gesture-manager": {
+      "version": "3.9.3",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.5.2 < 3.8.X"
+      }
+    },
+    "lyuma.av3emulator": {
+      "version": "3.4.8",
+      "dependencies": {
+        "com.vrchat.avatars": "^3.1.0"
+      }
+    }
+  }
+}

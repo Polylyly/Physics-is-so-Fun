@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Interactive Menu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 77d38cfe5f060964c91d545e7d5e146e, type: 2}
+  controls:
+  - name: Rapier
+    icon: {fileID: 2800000, guid: 8b4cc96dcc6fb484cb2b3d55c4997d99, type: 3}
+    type: 102
+    parameter:
+      name: EnableGrab
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Contacts
+    icon: {fileID: 2800000, guid: 16e0846165acaa1429417e757c53ef9b, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: b51196a6e28d216439336c5c02274764, type: 2}
+    subParameters: []
+    labels: []
+  - name: GoGo Loco
+    icon: {fileID: 2800000, guid: 82ab53a641de2f1448023168217721eb, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: d5ae14c463b6b494494c2f5064089632, type: 2}
+    subParameters: []
+    labels: []
+  - name: SFW Grab ON/OFF
+    icon: {fileID: 2800000, guid: 7ed33a9777353974482d46a7590219c3, type: 3}
+    type: 102
+    parameter:
+      name: SFW
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: NSFW Grab ON/OFF
+    icon: {fileID: 2800000, guid: 998dbe55c7035914182e0e56bcb8300f, type: 3}
+    type: 102
+    parameter:
+      name: NSFW
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
