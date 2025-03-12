@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ch.sycoforge.Decal;
 
 public class Tooth : MonoBehaviour
 {
     public Transform toothTip, toothTop;
     public LayerMask biteable;
     Transform initialPoint;
-    public float toothLength, maxDistanceBetweenInitialPoints, offset;
+    public float toothLength, maxDistanceBetweenInitialPoints, offset, offsetAtNull;
     public Color toothColour;
-    public GameObject holeDecal, bloodDecal;
+    public GameObject holeDecal;
     [SerializeField]
     float distanceFromInitial, highestDistance;
     bool bite = false;
@@ -25,6 +26,7 @@ public class Tooth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (highestDistance == 0) GetComponent<Renderer>().material.SetVector("_Offset", new Vector2(0, offsetAtNull));
         if (bite)
         {
             distanceFromInitial = Mathf.Clamp((Vector3.Dot(toothTip.position - initialPoint.position, -transform.up)), 0, toothLength);
@@ -46,7 +48,7 @@ public class Tooth : MonoBehaviour
             {
                 float distanceBetweenInitials = (other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position) - initialPoint.position).magnitude;
 
-                if (distanceBetweenInitials <= maxDistanceBetweenInitialPoints) //Something to check if it's close to old one
+                if (distanceBetweenInitials <= maxDistanceBetweenInitialPoints) //Checks if close to old bite
                 {
                     bite = true;
                 }
@@ -68,14 +70,10 @@ public class Tooth : MonoBehaviour
                     GetComponent<Renderer>().material.SetColor("_ToothColour", toothColour);
 
                     //Below is the creation of the decals
-                    //GameObject decalHole = Instantiate(holeDecal); //Might need to replace with decal projector
-                    //decalHole.transform.parent = other.transform;
-                    //decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
-                    //Sizing and stuff
-
-                    //GameObject decalBlood = Instantiate(bloodDecal); //Might need to replace with decal projector
-                    //decalBlood.transform.parent = other.transform;
-                    //decalBlood.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                    GameObject decalHole = Instantiate(holeDecal); //Might need to replace with decal projector
+                    decalHole.transform.parent = other.transform;
+                    decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                    decalHole.GetComponent<EasyDecal>().DecalMaterial.color = bloodColour;
                     //Sizing and stuff
                 }
             }
@@ -91,14 +89,10 @@ public class Tooth : MonoBehaviour
                 GetComponent<Renderer>().material.SetColor("_ToothColour", toothColour);
 
                 //Below is the creation of the decals
-                //GameObject decalHole = Instantiate(holeDecal);
-                //decalHole.transform.parent = other.transform;
-                //decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
-                //Sizing and stuff
-
-                //GameObject decalBlood = Instantiate(bloodDecal);
-                //decalBlood.transform.parent = other.transform;
-                //decalBlood.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                GameObject decalHole = Instantiate(holeDecal);
+                decalHole.transform.parent = other.transform;
+                decalHole.transform.position = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(toothTip.position);
+                decalHole.GetComponent<EasyDecal>().DecalMaterial.color = bloodColour;
                 //Sizing and stuff
             }
         }
