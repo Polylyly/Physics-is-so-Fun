@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: Marker Space Submenu
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: 77d38cfe5f060964c91d545e7d5e146e, type: 2}
   controls:
   - name: Avatar
     icon: {fileID: 2800000, guid: 32d3ac95f31119842a7b431ac607c91b, type: 3}

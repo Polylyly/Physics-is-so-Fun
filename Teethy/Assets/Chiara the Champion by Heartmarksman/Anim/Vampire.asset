@@ -18,22 +18,11 @@ MonoBehaviour:
     icon: {fileID: 0}
     type: 102
     parameter:
-      name: 
+      name: Teeth
     value: 1
     style: 0
     subMenu: {fileID: 0}
     subParameters: []
-    labels: []
-  - name: Teeth Size
-    icon: {fileID: 0}
-    type: 203
-    parameter:
-      name: 
-    value: 1
-    style: 0
-    subMenu: {fileID: 0}
-    subParameters:
-    - name: 
     labels: []
   - name: Open Mouth
     icon: {fileID: 0}

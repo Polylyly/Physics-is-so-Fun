@@ -339,3 +339,8 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
+  - name: Teeth
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1

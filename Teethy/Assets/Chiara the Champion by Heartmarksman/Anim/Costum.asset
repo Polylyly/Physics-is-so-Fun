@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: Costum
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: 77d38cfe5f060964c91d545e7d5e146e, type: 2}
   controls:
   - name: Hair Settings
     icon: {fileID: 2800000, guid: 20f911080c35e50408ce567b0f778974, type: 3}
